@@ -1,0 +1,8 @@
+---
+layout: post
+title: "BRB"
+date: 2013-01-16 02:39
+comments: true
+categories: ruby
+---
+BRB, learning Ruby...
