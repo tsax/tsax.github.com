@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://tsax.github.com/atom.xml" rel="self"/>
   <link href="http://tsax.github.com/"/>
-  <updated>2013-02-08T17:36:51-05:00</updated>
+  <updated>2013-02-08T18:17:23-05:00</updated>
   <id>http://tsax.github.com/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Nature's Complexity, Human Incomprehension]]></title>
+    <link href="http://tsax.github.com/blog/2013/01/29/natures-complexity-human-incomprehension/"/>
+    <updated>2013-01-29T17:54:00-05:00</updated>
+    <id>http://tsax.github.com/blog/2013/01/29/natures-complexity-human-incomprehension</id>
+    <content type="html"><![CDATA[<p>From the Enlightenment onwards, we humans have betrayed a supreme confidence in our ability to read, interpret, deconstruct and ultimately triumph over the natural world using nothing but our faculties of reason, through their manifestations in science, technology and philosophy.</p>
+
+<p>Okay that sounded way too high-brow. Nonetheless, I just came across <a href="http://highscalability.com/blog/2012/4/9/why-my-slime-mold-is-better-than-your-hadoop-cluster.html">this awe-inspiring post</a> at High Scalability.</p>
+
+<p>A creature as &#8216;simple&#8217; as a slime mold is capable of amazing feats of computation by following simple rules that Nature has granted it through evolution. I don&#8217;t know whether scientists have deconstructed slime molds down to individual proteins and built up a whole model of it, though that seems unlikely and complex. And that&#8217;s the point! The organization and structure of a slime mold, though simple compared to multi-cellular organisms like us, is still extremely complex for our minds to deconstruct through observation and reason. There&#8217;s logic embedded in the structural complexity of the natural world not wholly visible to us.</p>
+
+<p>Since I haven&#8217;t yet tried &#8216;genetic programming,&#8217; I don&#8217;t know how effective it is in adopting nature&#8217;s solutions to some computation problems, nonetheless I should give it a shot sometime, perhaps using <a href="http://hackershelf.com/book/5/clever-algorithms/">this book on HackerShelf</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Learning, muscle memory, typing]]></title>
