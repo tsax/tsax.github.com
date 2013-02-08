@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://tsax.github.com/atom.xml" rel="self"/>
   <link href="http://tsax.github.com/"/>
-  <updated>2013-02-08T13:22:20-05:00</updated>
+  <updated>2013-02-08T15:19:05-05:00</updated>
   <id>http://tsax.github.com/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[BRB]]></title>
-    <link href="http://tsax.github.com/blog/2013/01/16/brb/"/>
-    <updated>2013-01-16T02:39:00-05:00</updated>
-    <id>http://tsax.github.com/blog/2013/01/16/brb</id>
+    <link href="http://tsax.github.com/blog/2013/01/15/brb/"/>
+    <updated>2013-01-15T02:39:00-05:00</updated>
+    <id>http://tsax.github.com/blog/2013/01/15/brb</id>
     <content type="html"><![CDATA[<p>BRB, learning Ruby&#8230;</p>
 ]]></content>
   </entry>
