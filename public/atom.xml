@@ -1,32 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://tsax.github.com/atom.xml" rel="self"/>
-  <link href="http://tsax.github.com/"/>
-  <updated>2013-02-08T13:22:20-05:00</updated>
-  <id>http://tsax.github.com/</id>
+  <title><![CDATA[Tushar's Blog]]></title>
+  <link href="http://tusharsaxena.com/atom.xml" rel="self"/>
+  <link href="http://tusharsaxena.com/"/>
+  <updated>2013-02-08T20:10:37-05:00</updated>
+  <id>http://tusharsaxena.com/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Tushar Saxena]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
+    <title type="html"><![CDATA[Nature's Complexity, Human Incomprehension]]></title>
+    <link href="http://tusharsaxena.com/blog/2013/01/29/natures-complexity-human-incomprehension/"/>
+    <updated>2013-01-29T17:54:00-05:00</updated>
+    <id>http://tusharsaxena.com/blog/2013/01/29/natures-complexity-human-incomprehension</id>
+    <content type="html"><![CDATA[<p>From the Enlightenment onwards, we humans have betrayed a supreme confidence in our ability to read, interpret, deconstruct and ultimately triumph over the natural world using nothing but our faculties of reason, through their manifestations in science, technology and philosophy.</p>
+
+<p>Okay that sounded way too high-brow. Nonetheless, I just came across <a href="http://highscalability.com/blog/2012/4/9/why-my-slime-mold-is-better-than-your-hadoop-cluster.html">this awe-inspiring post</a> at High Scalability.</p>
+
+<p>A creature as &#8216;simple&#8217; as a slime mold is capable of amazing feats of computation by following simple rules that Nature has granted it through evolution. I don&#8217;t know whether scientists have deconstructed slime molds down to individual proteins and built up a whole model of it, though that seems unlikely and complex. And that&#8217;s the point! The organization and structure of a slime mold, though simple compared to multi-cellular organisms like us, is still extremely complex for our minds to deconstruct through observation and reason. There&#8217;s logic embedded in the structural complexity of the natural world not wholly visible to us.</p>
+
+<p>Since I haven&#8217;t yet tried &#8216;genetic programming,&#8217; I don&#8217;t know how effective it is in adopting nature&#8217;s solutions to some computation problems, nonetheless I should give it a shot sometime, perhaps using <a href="http://hackershelf.com/book/5/clever-algorithms/">this book on HackerShelf</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Learning, muscle memory, typing]]></title>
+    <link href="http://tusharsaxena.com/blog/2013/01/20/learning-muscle-memory-typing/"/>
+    <updated>2013-01-20T16:39:00-05:00</updated>
+    <id>http://tusharsaxena.com/blog/2013/01/20/learning-muscle-memory-typing</id>
+    <content type="html"><![CDATA[<p>Going through Zed Shaw&#8217;s <a href="http://ruby.learncodethehardway.org/book/">Learn Ruby the Hard Way</a>, I now recognize the importance of typing in the context of learning to program a new language. My professional experience in software development consisted of .NET development in C#, which is extremely similar to JAVA in syntax. So, upon encountering Ruby syntax elements such as pipes &#8216;|&#8217;, typing the code becomes slow due to a lack of practice, which impedes and constricts thinking.</p>
+
+<figure class='code'><figcaption><span>Exercise 12: Libraries</span><a href='http://ruby.learncodethehardway.org/book/ex12.html'>Source Article</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;open-uri&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;http://www.ruby-lang.org/en&quot;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">f</span><span class="o">.</span><span class="n">each_line</span> <span class="p">{</span><span class="o">|</span><span class="n">line</span><span class="o">|</span> <span class="nb">p</span> <span class="n">line</span><span class="p">}</span>
+</span><span class='line'>  <span class="nb">puts</span> <span class="n">f</span><span class="o">.</span><span class="n">base_uri</span>         <span class="c1"># &lt;URI::HTTP:0x40e6ef2 URL:http://www.ruby-lang.org/en/&gt;</span>
+</span><span class='line'>  <span class="nb">puts</span> <span class="n">f</span><span class="o">.</span><span class="n">content_type</span>     <span class="c1"># &quot;text/html&quot;</span>
+</span><span class='line'>  <span class="nb">puts</span> <span class="n">f</span><span class="o">.</span><span class="n">charset</span>          <span class="c1"># &quot;iso-8859-1&quot;</span>
+</span><span class='line'>  <span class="nb">puts</span> <span class="n">f</span><span class="o">.</span><span class="n">content_encoding</span> <span class="c1"># []</span>
+</span><span class='line'>  <span class="nb">puts</span> <span class="n">f</span><span class="o">.</span><span class="n">last_modified</span>    <span class="c1"># Thu Dec 05 02:45:02 UTC 2002</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Typing code like the excerpt above has developed muscle memory for me, and made me think of solutions faster, just as Zed said it would.</p>
+
+<p>Happy typing!</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[BRB]]></title>
-    <link href="http://tsax.github.com/blog/2013/01/16/brb/"/>
-    <updated>2013-01-16T02:39:00-05:00</updated>
-    <id>http://tsax.github.com/blog/2013/01/16/brb</id>
+    <link href="http://tusharsaxena.com/blog/2013/01/15/brb/"/>
+    <updated>2013-01-15T02:39:00-05:00</updated>
+    <id>http://tusharsaxena.com/blog/2013/01/15/brb</id>
     <content type="html"><![CDATA[<p>BRB, learning Ruby&#8230;</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Hello World]]></title>
-    <link href="http://tsax.github.com/blog/2013/01/10/hello-world/"/>
+    <link href="http://tusharsaxena.com/blog/2013/01/10/hello-world/"/>
     <updated>2013-01-10T20:18:00-05:00</updated>
-    <id>http://tsax.github.com/blog/2013/01/10/hello-world</id>
+    <id>http://tusharsaxena.com/blog/2013/01/10/hello-world</id>
     <content type="html"><![CDATA[<p>Hello World! I&#8217;m baaaaaackk.</p>
 ]]></content>
   </entry>

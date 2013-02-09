@@ -1,27 +1,37 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://tsax.github.com/blog/2013/01/10/hello-world/</loc>
+        <loc>http://tusharsaxena.com/blog/2013/01/10/hello-world/</loc>
         <lastmod>2013-01-11T01:55:22-05:00</lastmod>
     </url>
     <url>
-        <loc>http://tsax.github.com/blog/2013/01/16/brb/</loc>
-        <lastmod>2013-01-16T02:40:20-05:00</lastmod>
+        <loc>http://tusharsaxena.com/blog/2013/01/15/brb/</loc>
+        <lastmod>2013-02-08T15:18:24-05:00</lastmod>
     </url>
     <url>
-        <loc>http://tsax.github.com/archives/</loc>
-        <lastmod>2013-01-16T02:40:20-05:00</lastmod>
+        <loc>http://tusharsaxena.com/blog/2013/01/20/learning-muscle-memory-typing/</loc>
+        <lastmod>2013-02-08T17:36:43-05:00</lastmod>
     </url>
     <url>
-        <loc>http://tsax.github.com/blog/archives/</loc>
-        <lastmod>2013-01-16T02:40:20-05:00</lastmod>
+        <loc>
+            http://tusharsaxena.com/blog/2013/01/29/natures-complexity-human-incomprehension/
+        </loc>
+        <lastmod>2013-02-08T18:17:08-05:00</lastmod>
     </url>
     <url>
-        <loc>http://tsax.github.com/</loc>
-        <lastmod>2013-01-16T02:40:20-05:00</lastmod>
+        <loc>http://tusharsaxena.com/archives/</loc>
+        <lastmod>2013-02-08T18:17:08-05:00</lastmod>
     </url>
     <url>
-        <loc>http://tsax.github.com/robots.txt</loc>
+        <loc>http://tusharsaxena.com/blog/archives/</loc>
+        <lastmod>2013-02-08T18:17:08-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://tusharsaxena.com/</loc>
+        <lastmod>2013-02-08T18:17:08-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://tusharsaxena.com/robots.txt</loc>
         <lastmod>2013-01-10T19:49:18-05:00</lastmod>
     </url>
 </urlset>

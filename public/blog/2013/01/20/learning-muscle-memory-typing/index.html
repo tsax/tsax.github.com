@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - Tushar's Blog</title>
+  <title>Learning, muscle memory, typing - Tushar's Blog</title>
   <meta name="author" content="Tushar Saxena">
 
   
-  <meta name="description" content="Blog Archive 2013 Nature&#8217;s Complexity, Human Incomprehension
-Jan 29 2013 posted in Complexity, Embedded-Knowledge, Nature, Optimization &hellip;">
+  <meta name="description" content="Going through Zed Shaw&#8217;s Learn Ruby the Hard Way, I now recognize the importance of typing in the context of learning to program a new language &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@ Jan 29 2013 posted in Complexity, Embedded-Knowledge, Nature, Optimization &hell
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://tusharsaxena.com/archives/">
+  <link rel="canonical" href="http://tusharsaxena.com/blog/2013/01/20/learning-muscle-memory-typing/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
    <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -63,73 +62,117 @@ Jan 29 2013 posted in Complexity, Embedded-Knowledge, Nature, Optimization &hell
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">Learning, Muscle Memory, Typing</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-20T16:39:00-05:00" pubdate data-updated="true">Jan 20<span>th</span>, 2013</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
+<div class="entry-content"><p>Going through Zed Shaw&#8217;s <a href="http://ruby.learncodethehardway.org/book/">Learn Ruby the Hard Way</a>, I now recognize the importance of typing in the context of learning to program a new language. My professional experience in software development consisted of .NET development in C#, which is extremely similar to JAVA in syntax. So, upon encountering Ruby syntax elements such as pipes &#8216;|&#8217;, typing the code becomes slow due to a lack of practice, which impedes and constricts thinking.</p>
 
-  
-  <h2>2013</h2>
-
-<article>
-  
-<h1><a href="/blog/2013/01/29/natures-complexity-human-incomprehension/">Nature&#8217;s Complexity, Human Incomprehension</a></h1>
-<time datetime="2013-01-29T17:54:00-05:00" pubdate><span class='month'>Jan</span> <span class='day'>29</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/complexity/'>Complexity</a>, <a class='category' href='/blog/categories/embedded-knowledge/'>Embedded-Knowledge</a>, <a class='category' href='/blog/categories/nature/'>Nature</a>, <a class='category' href='/blog/categories/optimization/'>Optimization</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2013/01/20/learning-muscle-memory-typing/">Learning, muscle memory, typing</a></h1>
-<time datetime="2013-01-20T16:39:00-05:00" pubdate><span class='month'>Jan</span> <span class='day'>20</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/learn-ruby-the-hard-way/'>Learn-Ruby-The-Hard-Way</a>, <a class='category' href='/blog/categories/learning/'>Learning</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/typing/'>Typing</a></span>
-</footer>
+<figure class='code'><figcaption><span>Exercise 12: Libraries</span><a href='http://ruby.learncodethehardway.org/book/ex12.html'>Source Article</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;open-uri&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;http://www.ruby-lang.org/en&quot;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">f</span><span class="o">.</span><span class="n">each_line</span> <span class="p">{</span><span class="o">|</span><span class="n">line</span><span class="o">|</span> <span class="nb">p</span> <span class="n">line</span><span class="p">}</span>
+</span><span class='line'>  <span class="nb">puts</span> <span class="n">f</span><span class="o">.</span><span class="n">base_uri</span>         <span class="c1"># &lt;URI::HTTP:0x40e6ef2 URL:http://www.ruby-lang.org/en/&gt;</span>
+</span><span class='line'>  <span class="nb">puts</span> <span class="n">f</span><span class="o">.</span><span class="n">content_type</span>     <span class="c1"># &quot;text/html&quot;</span>
+</span><span class='line'>  <span class="nb">puts</span> <span class="n">f</span><span class="o">.</span><span class="n">charset</span>          <span class="c1"># &quot;iso-8859-1&quot;</span>
+</span><span class='line'>  <span class="nb">puts</span> <span class="n">f</span><span class="o">.</span><span class="n">content_encoding</span> <span class="c1"># []</span>
+</span><span class='line'>  <span class="nb">puts</span> <span class="n">f</span><span class="o">.</span><span class="n">last_modified</span>    <span class="c1"># Thu Dec 05 02:45:02 UTC 2002</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-</article>
+<p>Typing code like the excerpt above has developed muscle memory for me, and made me think of solutions faster, just as Zed said it would.</p>
 
-
-
-<article>
-  
-<h1><a href="/blog/2013/01/15/brb/">BRB</a></h1>
-<time datetime="2013-01-15T02:39:00-05:00" pubdate><span class='month'>Jan</span> <span class='day'>15</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/ruby/'>ruby</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2013/01/10/hello-world/">Hello World</a></h1>
-<time datetime="2013-01-10T20:18:00-05:00" pubdate><span class='month'>Jan</span> <span class='day'>10</span> <span class='year'>2013</span></time>
-
-
-</article>
-
+<p>Happy typing!</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Tushar Saxena</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-20T16:39:00-05:00" pubdate data-updated="true">Jan 20<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/learn-ruby-the-hard-way/'>Learn-Ruby-The-Hard-Way</a>, <a class='category' href='/blog/categories/learning/'>Learning</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/typing/'>Typing</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://tusharsaxena.com/blog/2013/01/20/learning-muscle-memory-typing/" data-via="tushar_saxena" data-counturl="http://tusharsaxena.com/blog/2013/01/20/learning-muscle-memory-typing/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/01/15/brb/" title="Previous Post: BRB">&laquo; BRB</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/01/29/natures-complexity-human-incomprehension/" title="Next Post: Nature's Complexity, Human Incomprehension">Nature's Complexity, Human Incomprehension &raquo;</a>
+      
+    </p>
+  </footer>
 </article>
 
 </div>

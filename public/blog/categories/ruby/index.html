@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: ruby - My Octopress Blog</title>
-  <meta name="author" content="Your Name">
+  <title>Category: Ruby - Tushar's Blog</title>
+  <meta name="author" content="Tushar Saxena">
 
   
-  <meta name="description" content="Category: ruby">
+  <meta name="description" content="Category: Ruby">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,14 +18,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://tsax.github.comblog/categories/ruby/">
+  <link rel="canonical" href="http://tusharsaxena.comblog/categories/ruby/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
    <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="Tushar's Blog" type="application/atom+xml">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -48,7 +48,7 @@
   
 <form action="http://google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:tsax.github.com" />
+    <input type="hidden" name="q" value="site:tusharsaxena.com" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
@@ -78,11 +78,11 @@
 
 <article>
   
-<h1><a href="/blog/2013/01/16/brb/">BRB</a></h1>
-<time datetime="2013-01-16T02:39:00-05:00" pubdate><span class='month'>Jan</span> <span class='day'>16</span> <span class='year'>2013</span></time>
+<h1><a href="/blog/2013/01/20/learning-muscle-memory-typing/">Learning, muscle memory, typing</a></h1>
+<time datetime="2013-01-20T16:39:00-05:00" pubdate><span class='month'>Jan</span> <span class='day'>20</span> <span class='year'>2013</span></time>
 
 <footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/ruby/'>ruby</a></span>
+  <span class="categories">posted in <a class='category' href='/blog/categories/learn-ruby-the-hard-way/'>Learn-Ruby-The-Hard-Way</a>, <a class='category' href='/blog/categories/learning/'>Learning</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/typing/'>Typing</a></span>
 </footer>
 
 
@@ -98,11 +98,29 @@
 <aside class="sidebar">
   
     <section>
+  <ul id="recent_posts">
+      <li class="post">
+      <a href="http://tusharsaxena.com" alt="Home"><img src="/images/Home.png"></a>
+      <a href="http://tusharsaxena.com/archives/" alt="Archives"><img src="/images/Calendar.png"></a>
+      <a href="mailto:" alt="E-Mail"><img src="/images/Envelope.png"></a>
+      <a href="http://tusharsaxena.com/atom.xml" alt="subscribe feed"><img src="/images/rss_big.png"></a>
+      </li>
+  </ul>
+</section>
+<section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2013/01/16/brb/">BRB</a>
+        <a href="/blog/2013/01/29/natures-complexity-human-incomprehension/">Nature's Complexity, Human Incomprehension</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/01/20/learning-muscle-memory-typing/">Learning, muscle memory, typing</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/01/15/brb/">BRB</a>
       </li>
     
       <li class="post">
@@ -112,6 +130,51 @@
   </ul>
 </section>
 
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/tsax">@tsax</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'tsax',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("tushar_saxena", 0, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/tushar_saxena" class="twitter-follow-button" data-show-count="false">Follow @tushar_saxena</a>
+  
+</section>
 
 
 
@@ -124,7 +187,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Your Name -
+  Copyright &copy; 2013 - Tushar Saxena -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
@@ -133,7 +196,24 @@
 
 
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
 
 
 
