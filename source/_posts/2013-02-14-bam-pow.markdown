@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Bam! Pow!"
+date: 2013-02-14 18:13
+comments: true
+categories: 
+---
+[Pow is awesome](http://37signals.com/svn/posts/3191-announcing-pow-040-with-xipio-support)
+
+{% img http://mahoutofu.files.wordpress.com/2012/11/pow.jpg 250 250 %}
+
+I understood the obsessive focus of talented hackers on customizing and shortening every part of the development workflow, including reducing one word (5 letter) commands to 2 letter commands, in an intellectual manner, but I hadn't _felt_ it, till I started experimenting with Rails development. Typing ```rails s``` every minute can get old. This is where [pow](http://pow.cx/) along with [powder](https://github.com/Rodreegez/powder) have been awesome. Now when I create a new rails app, I just run
+``` powder link``` to create a pow dev server for my app. Now, whenever I feel like testing out my app in the browser, I just launch ```powder open``` and the app is served in the browser. This replaces launching the rails server, followed by switching to the server and navigating to localhost:3000. 
+
+So, I want to end by thanking the 37Signals dev team, along with Adam Rogers and Phil Nash for making my life easier.
