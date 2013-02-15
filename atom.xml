@@ -4,7 +4,7 @@
   <title><![CDATA[Tushar's Blog]]></title>
   <link href="http://www.tusharsaxena.com/atom.xml" rel="self"/>
   <link href="http://www.tusharsaxena.com/"/>
-  <updated>2013-02-14T21:57:03-05:00</updated>
+  <updated>2013-02-15T02:24:09-05:00</updated>
   <id>http://www.tusharsaxena.com/</id>
   <author>
     <name><![CDATA[Tushar Saxena]]></name>
@@ -12,6 +12,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[pow environment variable trouble]]></title>
+    <link href="http://www.tusharsaxena.com/blog/2013/02/15/pow-environment-variable-trouble/"/>
+    <updated>2013-02-15T01:57:00-05:00</updated>
+    <id>http://www.tusharsaxena.com/blog/2013/02/15/pow-environment-variable-trouble</id>
+    <content type="html"><![CDATA[<p>I was caught up in excitement upon discovering <a href="http://pow.cx">pow</a>. After setting it up, and testing it out on the project I&#8217;m working on now, I encountered a problem. My app is setup to send email using Gmail thru SMTP configured in a Rails environment config, and the email is sent using ActionMailer.</p>
+
+<p>The config looks like this</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>address: "smtp.gmail.com",
+</span><span class='line'>port: 587,
+</span><span class='line'>user_name: ENV["GMAIL_USERNAME"],
+</span><span class='line'>password: ENV["GMAIL_PASSWORD"],
+</span><span class='line'>authentication: :login
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>  The emails were arriving when I tested the app by running <code>rails server</code> but on the local pow server, authentication errors were the norm. Clearly the environment variables weren&#8217;t being set. So I googled pow&#8217;s documentation for how to setup environment variables, ending up on <a href="http://pow.cx/manual.html#section_2.2">this page</a>. While reading through the linked section, I missed something critical.</p>
+
+<p>  &#8220;Pow attempts to execute two scripts — first .powrc, then .powenv — <strong>in the application&#8217;s root</strong>. Any environment variables exported from these scripts are passed along to Rack.&#8221;</p>
+
+<p>  So I idiotically set about creating a .powrc file in my user/bin directory. Obviously this did not work, but I wasted an hour or so tweaking random settings trying to get this to work. Then I re-read the page, set about to fix the problem, which I did as follows.</p>
+
+<ol>
+<li>Run <code>touch .powrc</code> in my project&#8217;s root.</li>
+<li>Edit .powrc and add the environment variables as follows:
+<code>
+export GMAIL_USERNAME=username
+export GMAIL_PASSWORD="my password"
+</code></li>
+<li>Restart pow&#8217;s worker for the app by running
+<code>touch tmp/restart.txt</code></li>
+</ol>
+
+
+<p>  And that worked!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Bam! Pow!]]></title>
