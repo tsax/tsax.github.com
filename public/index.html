@@ -9,7 +9,7 @@
   <meta name="author" content="Tushar Saxena">
 
   
-  <meta name="description" content="Pow is awesome I understood the obsessive focus of talented hackers on customizing and shortening every part of the development workflow, including &hellip;">
+  <meta name="description" content="I was caught up in excitement upon discovering pow. After setting it up, and testing it out on the project I&#8217;m working on now, I encountered a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -63,6 +63,77 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/02/15/pow-environment-variable-trouble/">Pow Environment Variable Trouble</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-15T01:57:00-05:00" pubdate data-updated="true">Feb 15<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I was caught up in excitement upon discovering <a href="http://pow.cx">pow</a>. After setting it up, and testing it out on the project I&#8217;m working on now, I encountered a problem. My app is setup to send email using Gmail thru SMTP configured in a Rails environment config, and the email is sent using ActionMailer.</p>
+
+<p>The config looks like this</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>address: "smtp.gmail.com",
+</span><span class='line'>port: 587,
+</span><span class='line'>user_name: ENV["GMAIL_USERNAME"],
+</span><span class='line'>password: ENV["GMAIL_PASSWORD"],
+</span><span class='line'>authentication: :login
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>  The emails were arriving when I tested the app by running <code>rails server</code> but on the local pow server, authentication errors were the norm. Clearly the environment variables weren&#8217;t being set. So I googled pow&#8217;s documentation for how to setup environment variables, ending up on <a href="http://pow.cx/manual.html#section_2.2">this page</a>. While reading through the linked section, I missed something critical.</p>
+
+<p>  &#8220;Pow attempts to execute two scripts — first .powrc, then .powenv — <strong>in the application&#8217;s root</strong>. Any environment variables exported from these scripts are passed along to Rack.&#8221;</p>
+
+<p>  So I idiotically set about creating a .powrc file in my user/bin directory. Obviously this did not work, but I wasted an hour or so tweaking random settings trying to get this to work. Then I re-read the page, set about to fix the problem, which I did as follows.</p>
+
+<ol>
+<li>Run <code>touch .powrc</code> in my project&#8217;s root.</li>
+<li>Edit .powrc and add the environment variables as follows:
+<code>
+export GMAIL_USERNAME=username
+export GMAIL_PASSWORD="my password"
+</code></li>
+<li>Restart pow&#8217;s worker for the app by running
+<code>touch tmp/restart.txt</code></li>
+</ol>
+
+
+<p>  And that worked!</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -307,6 +378,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/02/15/pow-environment-variable-trouble/">pow environment variable trouble</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/02/14/bam-pow/">Bam! Pow!</a>
       </li>
     
@@ -320,10 +395,6 @@
     
       <li class="post">
         <a href="/blog/2013/01/15/brb/">BRB</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/01/10/hello-world/">Hello World</a>
       </li>
     
   </ul>
