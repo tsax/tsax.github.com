@@ -4,7 +4,7 @@
   <title><![CDATA[Tushar's Blog]]></title>
   <link href="http://www.tusharsaxena.com/atom.xml" rel="self"/>
   <link href="http://www.tusharsaxena.com/"/>
-  <updated>2013-02-09T01:36:49-05:00</updated>
+  <updated>2013-02-14T21:57:03-05:00</updated>
   <id>http://www.tusharsaxena.com/</id>
   <author>
     <name><![CDATA[Tushar Saxena]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Bam! Pow!]]></title>
+    <link href="http://www.tusharsaxena.com/blog/2013/02/14/bam-pow/"/>
+    <updated>2013-02-14T18:13:00-05:00</updated>
+    <id>http://www.tusharsaxena.com/blog/2013/02/14/bam-pow</id>
+    <content type="html"><![CDATA[<p><a href="http://37signals.com/svn/posts/3191-announcing-pow-040-with-xipio-support">Pow is awesome</a></p>
+
+<p><img src="http://mahoutofu.files.wordpress.com/2012/11/pow.jpg" width="250" height="250"></p>
+
+<p>I understood the obsessive focus of talented hackers on customizing and shortening every part of the development workflow, including reducing one word (5 letter) commands to 2 letter commands, in an intellectual manner, but I hadn&#8217;t <em>felt</em> it, till I started experimenting with Rails development. Typing <code>rails s</code> every minute can get old. This is where <a href="http://pow.cx/">pow</a> along with <a href="https://github.com/Rodreegez/powder">powder</a> have been awesome. Now when I create a new rails app, I just run
+<code>powder link</code> to create a pow dev server for my app. Now, whenever I feel like testing out my app in the browser, I just launch <code>powder open</code> and the app is served in the browser. This replaces launching the rails server, followed by switching to the server and navigating to localhost:3000.</p>
+
+<p>So, I want to end by thanking the 37Signals dev team, along with Adam Rogers and Phil Nash for making my life easier.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Nature's Complexity, Human Incomprehension]]></title>
