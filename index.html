@@ -9,7 +9,7 @@
   <meta name="author" content="Tushar Saxena">
 
   
-  <meta name="description" content="I&#8217;ve been playing with Duolingo for around a month, specifically with the Spanish module. It&#8217;s absolutely fantastic. I&#8217;d signed up &hellip;">
+  <meta name="description" content="Working on my side project, Pecunia-Nunc, I was baffled when the errors on the object creation form would not display upon submission. The controller &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -63,6 +63,108 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/03/25/redirect-to-and-preservation-of-errors/">Redirect_to and Preservation of Errors</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-25T00:38:00-04:00" pubdate data-updated="true">Mar 25<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Working on my side project, <a href="https://github.com/tsax/pecunia-nunc/">Pecunia-Nunc</a>, I was baffled when the errors on the object creation form would not display upon submission. The controller looked like this</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">SubscribersController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">new</span>
+</span><span class='line'>  <span class="nb">require</span> <span class="s1">&#39;digest&#39;</span>
+</span><span class='line'>  <span class="vi">@subscriber</span> <span class="o">=</span> <span class="no">Subscriber</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:subscriber</span><span class="o">]</span><span class="p">)</span>
+</span><span class='line'>  <span class="vi">@subscriber</span><span class="o">.</span><span class="n">token</span> <span class="o">=</span> <span class="ss">Digest</span><span class="p">:</span><span class="ss">:SHA1</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">(</span><span class="o">[</span><span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="p">,</span> <span class="nb">rand</span><span class="o">].</span><span class="n">join</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">if</span> <span class="vi">@subscriber</span><span class="o">.</span><span class="n">save</span>
+</span><span class='line'>      <span class="n">flash</span><span class="o">[</span><span class="ss">:notice</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;Thanks for signing-up. Please confirm your email address through the email that&#39;ll be in your inbox shortly!&quot;</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">redirect_to</span> <span class="n">home_path</span>
+</span><span class='line'>  <span class="k">else</span>
+</span><span class='line'>      <span class="n">flash</span><span class="o">[</span><span class="ss">:notice</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;There were errors! Please resubmit after making corrections.&quot;</span>
+</span><span class='line'>      <span class="n">redirect_to</span> <span class="n">home_path</span>
+</span><span class='line'>  <span class="k">end</span>  
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="o">.</span><span class="n">.</span><span class="o">.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The view :</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="o">&lt;</span><span class="sx">% if </span><span class="vi">@subscriber</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">any?</span> <span class="sx">%&gt;</span>
+</span><span class='line'><span class="sx">  &lt;div id=&quot;error_explanation&quot;&gt;</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;alert alert-error&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>      <span class="no">The</span> <span class="n">form</span> <span class="n">contains</span> <span class="o">&lt;</span><span class="sx">%= pluralize(@subscriber.errors.count, &quot;error&quot;) %&gt;.</span>
+</span><span class='line'><span class="sx">    &lt;/div&gt;</span>
+</span><span class='line'><span class="sx">    &lt;ul&gt;</span>
+</span><span class='line'><span class="sx">    &lt;% @subscriber.errors.full_messages.each do |msg| %&gt;</span>
+</span><span class='line'><span class="sx">      &lt;li&gt;* &lt;%=</span> <span class="n">msg</span> <span class="sx">%&gt;&lt;/li&gt;</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="sx">% end %&gt;</span>
+</span><span class='line'><span class="sx">    &lt;/ul&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="sr">/div&gt;</span>
+</span><span class='line'><span class="sr">&lt;% end %&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As you can tell, the problem was not in the view at all, but in this line <code>redirect_to home_path</code>. Redirection clears the object.errors field, and therefore nothing was being displayed. I stupidly spent a lot of time fiddling with the view, instead of inspecting the controller action. Replacing the problematic line with <code>render 'new'</code> (&#8216;new&#8217; is the action/view that renders the form) solved the problem by preserving the .errors object.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -418,6 +520,10 @@ export GMAIL_PASSWORD="my password"
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/03/25/redirect-to-and-preservation-of-errors/">Redirect_to and preservation of errors</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/02/19/me-encanta-duolingo/">Me Encanta Duolingo!</a>
       </li>
     
@@ -431,10 +537,6 @@ export GMAIL_PASSWORD="my password"
     
       <li class="post">
         <a href="/blog/2013/01/29/natures-complexity-human-incomprehension/">Nature&#8217;s Complexity, Human Incomprehension</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/01/20/learning-muscle-memory-typing/">Learning, muscle memory, typing</a>
       </li>
     
   </ul>
