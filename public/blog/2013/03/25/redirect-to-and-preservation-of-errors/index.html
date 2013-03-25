@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Learning, muscle memory, typing - Tushar's Blog</title>
+  <title>Redirect_to and preservation of errors - Tushar's Blog</title>
   <meta name="author" content="Tushar Saxena">
 
   
-  <meta name="description" content="Going through Zed Shaw&#8217;s Learn Ruby the Hard Way, I now recognize the importance of typing in the context of learning to program a new language &hellip;">
+  <meta name="description" content="Working on my side project, Pecunia-Nunc, I was baffled when the errors on the object creation form would not display upon submission. The controller &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.tusharsaxena.com/blog/2013/01/20/learning-muscle-memory-typing/">
+  <link rel="canonical" href="http://www.tusharsaxena.com/blog/2013/03/25/redirect-to-and-preservation-of-errors/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
    <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -66,7 +66,7 @@
   
   <header>
     
-      <h1 class="entry-title">Learning, Muscle Memory, Typing</h1>
+      <h1 class="entry-title">Redirect_to and Preservation of Errors</h1>
     
     
       <p class="meta">
@@ -82,16 +82,16 @@
   
 
 
-<time datetime="2013-01-20T16:39:00-05:00" pubdate data-updated="true">Jan 20<span>th</span>, 2013</time>
+<time datetime="2013-03-25T00:38:00-04:00" pubdate data-updated="true">Mar 25<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Going through Zed Shaw&#8217;s <a href="http://ruby.learncodethehardway.org/book/">Learn Ruby the Hard Way</a>, I now recognize the importance of typing in the context of learning to program a new language. My professional experience in software development consisted of .NET development in C#, which is extremely similar to JAVA in syntax. So, upon encountering Ruby syntax elements such as pipes &#8216;|&#8217;, typing the code becomes slow due to a lack of practice, which impedes and constricts thinking.</p>
+<div class="entry-content"><p>Working on my side project, <a href="https://github.com/tsax/pecunia-nunc/">Pecunia-Nunc</a>, I was baffled when the errors on the object creation form would not display upon submission. The controller looked like this</p>
 
-<figure class='code'><figcaption><span>Exercise 12: Libraries</span><a href='http://ruby.learncodethehardway.org/book/ex12.html'>Source Article</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -101,22 +101,61 @@
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
 <span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;open-uri&#39;</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">SubscribersController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
 </span><span class='line'>
-</span><span class='line'><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;http://www.ruby-lang.org/en&quot;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
-</span><span class='line'>  <span class="n">f</span><span class="o">.</span><span class="n">each_line</span> <span class="p">{</span><span class="o">|</span><span class="n">line</span><span class="o">|</span> <span class="nb">p</span> <span class="n">line</span><span class="p">}</span>
-</span><span class='line'>  <span class="nb">puts</span> <span class="n">f</span><span class="o">.</span><span class="n">base_uri</span>         <span class="c1"># &lt;URI::HTTP:0x40e6ef2 URL:http://www.ruby-lang.org/en/&gt;</span>
-</span><span class='line'>  <span class="nb">puts</span> <span class="n">f</span><span class="o">.</span><span class="n">content_type</span>     <span class="c1"># &quot;text/html&quot;</span>
-</span><span class='line'>  <span class="nb">puts</span> <span class="n">f</span><span class="o">.</span><span class="n">charset</span>          <span class="c1"># &quot;iso-8859-1&quot;</span>
-</span><span class='line'>  <span class="nb">puts</span> <span class="n">f</span><span class="o">.</span><span class="n">content_encoding</span> <span class="c1"># []</span>
-</span><span class='line'>  <span class="nb">puts</span> <span class="n">f</span><span class="o">.</span><span class="n">last_modified</span>    <span class="c1"># Thu Dec 05 02:45:02 UTC 2002</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">new</span>
+</span><span class='line'>  <span class="nb">require</span> <span class="s1">&#39;digest&#39;</span>
+</span><span class='line'>  <span class="vi">@subscriber</span> <span class="o">=</span> <span class="no">Subscriber</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:subscriber</span><span class="o">]</span><span class="p">)</span>
+</span><span class='line'>  <span class="vi">@subscriber</span><span class="o">.</span><span class="n">token</span> <span class="o">=</span> <span class="ss">Digest</span><span class="p">:</span><span class="ss">:SHA1</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">(</span><span class="o">[</span><span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="p">,</span> <span class="nb">rand</span><span class="o">].</span><span class="n">join</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">if</span> <span class="vi">@subscriber</span><span class="o">.</span><span class="n">save</span>
+</span><span class='line'>      <span class="n">flash</span><span class="o">[</span><span class="ss">:notice</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;Thanks for signing-up. Please confirm your email address through the email that&#39;ll be in your inbox shortly!&quot;</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">redirect_to</span> <span class="n">home_path</span>
+</span><span class='line'>  <span class="k">else</span>
+</span><span class='line'>      <span class="n">flash</span><span class="o">[</span><span class="ss">:notice</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;There were errors! Please resubmit after making corrections.&quot;</span>
+</span><span class='line'>      <span class="n">redirect_to</span> <span class="n">home_path</span>
+</span><span class='line'>  <span class="k">end</span>  
 </span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="o">.</span><span class="n">.</span><span class="o">.</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Typing code like the excerpt above has developed muscle memory for me, and made me think of solutions faster, just as Zed said it would.</p>
+<p>The view :</p>
 
-<p>Happy typing!</p>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="o">&lt;</span><span class="sx">% if </span><span class="vi">@subscriber</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">any?</span> <span class="sx">%&gt;</span>
+</span><span class='line'><span class="sx">  &lt;div id=&quot;error_explanation&quot;&gt;</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;alert alert-error&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>      <span class="no">The</span> <span class="n">form</span> <span class="n">contains</span> <span class="o">&lt;</span><span class="sx">%= pluralize(@subscriber.errors.count, &quot;error&quot;) %&gt;.</span>
+</span><span class='line'><span class="sx">    &lt;/div&gt;</span>
+</span><span class='line'><span class="sx">    &lt;ul&gt;</span>
+</span><span class='line'><span class="sx">    &lt;% @subscriber.errors.full_messages.each do |msg| %&gt;</span>
+</span><span class='line'><span class="sx">      &lt;li&gt;* &lt;%=</span> <span class="n">msg</span> <span class="sx">%&gt;&lt;/li&gt;</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="sx">% end %&gt;</span>
+</span><span class='line'><span class="sx">    &lt;/ul&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="sr">/div&gt;</span>
+</span><span class='line'><span class="sr">&lt;% end %&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As you can tell, the problem was not in the view at all, but in this line <code>redirect_to home_path</code>. Redirection clears the object.errors field, and therefore nothing was being displayed. I stupidly spent a lot of time fiddling with the view, instead of inspecting the controller action. Replacing the problematic line with <code>render 'new'</code> (&#8216;new&#8217; is the action/view that renders the form) solved the problem by preserving the .errors object.</p>
 </div>
 
 
@@ -139,12 +178,12 @@
   
 
 
-<time datetime="2013-01-20T16:39:00-05:00" pubdate data-updated="true">Jan 20<span>th</span>, 2013</time>
+<time datetime="2013-03-25T00:38:00-04:00" pubdate data-updated="true">Mar 25<span>th</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/learn-ruby-the-hard-way/'>Learn-Ruby-The-Hard-Way</a>, <a class='category' href='/blog/categories/learning/'>Learning</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/typing/'>Typing</a>
+    <a class='category' href='/blog/categories/debugging-/'>debugging,</a>, <a class='category' href='/blog/categories/pecunia-nunc-/'>pecunia-nunc,</a>, <a class='category' href='/blog/categories/side-projects/'>side-projects</a>
   
 </span>
 
@@ -153,7 +192,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.tusharsaxena.com/blog/2013/01/20/learning-muscle-memory-typing/" data-via="tushar_saxena" data-counturl="http://www.tusharsaxena.com/blog/2013/01/20/learning-muscle-memory-typing/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.tusharsaxena.com/blog/2013/03/25/redirect-to-and-preservation-of-errors/" data-via="tushar_saxena" data-counturl="http://www.tusharsaxena.com/blog/2013/03/25/redirect-to-and-preservation-of-errors/" >Tweet</a>
   
   
   
@@ -164,10 +203,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/01/15/brb/" title="Previous Post: BRB">&laquo; BRB</a>
+        <a class="basic-alignment left" href="/blog/2013/02/19/me-encanta-duolingo/" title="Previous Post: Me Encanta Duolingo!">&laquo; Me Encanta Duolingo!</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/01/29/natures-complexity-human-incomprehension/" title="Next Post: Nature's Complexity, Human Incomprehension">Nature's Complexity, Human Incomprehension &raquo;</a>
       
     </p>
   </footer>
@@ -287,8 +324,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://www.tusharsaxena.com/blog/2013/01/20/learning-muscle-memory-typing/';
-        var disqus_url = 'http://www.tusharsaxena.com/blog/2013/01/20/learning-muscle-memory-typing/';
+        var disqus_identifier = 'http://www.tusharsaxena.com/blog/2013/03/25/redirect-to-and-preservation-of-errors/';
+        var disqus_url = 'http://www.tusharsaxena.com/blog/2013/03/25/redirect-to-and-preservation-of-errors/';
         var disqus_script = 'embed.js';
       
     (function () {
