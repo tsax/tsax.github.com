@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: setbacks | Tushar's Blog]]></title>
+  <link href="http://www.tusharsaxena.com/blog/categories/setbacks/atom.xml" rel="self"/>
+  <link href="http://www.tusharsaxena.com/"/>
+  <updated>2013-04-03T23:37:22-04:00</updated>
+  <id>http://www.tusharsaxena.com/</id>
+  <author>
+    <name><![CDATA[Tushar Saxena]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Down with the Sickness]]></title>
+    <link href="http://www.tusharsaxena.com/blog/2013/04/03/down-with-the-sickness/"/>
+    <updated>2013-04-03T23:30:00-04:00</updated>
+    <id>http://www.tusharsaxena.com/blog/2013/04/03/down-with-the-sickness</id>
+    <content type="html"><![CDATA[<p>This is me for the past week</p>
+
+<p><img src="http://westfieldcomics.com/blog/wp-content/uploads/2010/04/Sick-man-in-bed.jpg" title="[sickk[still sick!]]" ></p>
+
+<p>Really need to get a lot of work done including all the side projects, but gah sometimes biology comes in the way. Damn you Rotavirus.</p>
+]]></content>
+  </entry>
+  
+</feed>
