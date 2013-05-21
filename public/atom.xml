@@ -4,7 +4,7 @@
   <title><![CDATA[Tushar's Blog]]></title>
   <link href="http://www.tusharsaxena.com/atom.xml" rel="self"/>
   <link href="http://www.tusharsaxena.com/"/>
-  <updated>2013-04-03T23:37:22-04:00</updated>
+  <updated>2013-05-21T01:02:52-04:00</updated>
   <id>http://www.tusharsaxena.com/</id>
   <author>
     <name><![CDATA[Tushar Saxena]]></name>
@@ -12,6 +12,40 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[I'm Not a Spammer]]></title>
+    <link href="http://www.tusharsaxena.com/blog/2013/04/09/im-not-a-spammer/"/>
+    <updated>2013-04-09T02:05:00-04:00</updated>
+    <id>http://www.tusharsaxena.com/blog/2013/04/09/im-not-a-spammer</id>
+    <content type="html"><![CDATA[<p>For my current side-project, I need to send emails to a list of people whose email addresses are stored in the database. My concern, as you can imagine, is to prevent spamming my users in instances of error or otherwise. There&#8217;s several ways to do this. As usual, it comes down to a choice - a judgement call from among the many choices.</p>
+
+<ol>
+<li>Creating an emails model to keep track of when an email was sent and to whom.</li>
+<li>Storing the last time a user received an email in the user model.</li>
+</ol>
+
+
+<p>You can think of many others ways to do this of course.
+I decided to go with the second option as it required minimal effort and has so far turned out
+very well. This was accomplished with a single <code>rails generate migration AddLastEmailToSubscribers last_email:datetime</code>.</p>
+
+<p>This will create the following migration</p>
+
+<figure class='code'><figcaption><span>AddLastEmailToSubscribers</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">AddLastEmailToSubscribers</span> <span class="o">&lt;</span> <span class="ss">ActiveRecord</span><span class="p">:</span><span class="ss">:Migration</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">change</span>
+</span><span class='line'>    <span class="n">add_column</span> <span class="ss">:subscribers</span><span class="p">,</span> <span class="ss">:last_email</span><span class="p">,</span> <span class="ss">:datetime</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Down with the Sickness]]></title>

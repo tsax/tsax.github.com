@@ -4,7 +4,7 @@
   <title><![CDATA[Category: learning | Tushar's Blog]]></title>
   <link href="http://www.tusharsaxena.com/blog/categories/learning/atom.xml" rel="self"/>
   <link href="http://www.tusharsaxena.com/"/>
-  <updated>2013-04-03T23:37:22-04:00</updated>
+  <updated>2013-05-21T01:02:52-04:00</updated>
   <id>http://www.tusharsaxena.com/</id>
   <author>
     <name><![CDATA[Tushar Saxena]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[I'm Not a Spammer]]></title>
+    <link href="http://www.tusharsaxena.com/blog/2013/04/09/im-not-a-spammer/"/>
+    <updated>2013-04-09T02:05:00-04:00</updated>
+    <id>http://www.tusharsaxena.com/blog/2013/04/09/im-not-a-spammer</id>
+    <content type="html"><![CDATA[<p>For my current side-project, I need to send emails to a list of people whose email addresses are stored in the database. My concern, as you can imagine, is to prevent spamming my users in instances of error or otherwise. There's several ways to do this. As usual, it comes down to a choice - a judgement call from among the many choices.</p>
+
+<ol>
+<li>Creating an emails model to keep track of when an email was sent and to whom.</li>
+<li>Storing the last time a user received an email in the user model.</li>
+</ol>
+
+
+<p>You can think of many others ways to do this of course.
+I decided to go with the second option as it required minimal effort and has so far turned out
+very well. This was accomplished with a single <code>rails generate migration AddLastEmailToSubscribers last_email:datetime</code>.</p>
+
+<p>This will create the following migration
+``` ruby AddLastEmailToSubscribers
+class AddLastEmailToSubscribers &lt; ActiveRecord::Migration
+  def change</p>
+
+<pre><code>add_column :subscribers, :last_email, :datetime
+</code></pre>
+
+<p>  end
+end</p>
+
+<p>```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Me Encanta Duolingo!]]></title>
@@ -23,6 +55,32 @@
 <p>So, if you have any interest at all in learning Spanish, French, Italian, German or Portuguese (these are the available modules currently), click over to <a href="http://www.duolingo.com">Duolingo</a>, you'll thank me later.</p>
 
 <p>Oh, did I mention it's absolutely free?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Learning, muscle memory, typing]]></title>
+    <link href="http://www.tusharsaxena.com/blog/2013/01/20/learning-muscle-memory-typing/"/>
+    <updated>2013-01-20T16:39:00-05:00</updated>
+    <id>http://www.tusharsaxena.com/blog/2013/01/20/learning-muscle-memory-typing</id>
+    <content type="html"><![CDATA[<p>Going through Zed Shaw's <a href="http://ruby.learncodethehardway.org/book/">Learn Ruby the Hard Way</a>, I now recognize the importance of typing in the context of learning to program a new language. My professional experience in software development consisted of .NET development in C#, which is extremely similar to JAVA in syntax. So, upon encountering Ruby syntax elements such as pipes '|', typing the code becomes slow due to a lack of practice, which impedes and constricts thinking.</p>
+
+<p>```ruby Exercise 12: Libraries http://ruby.learncodethehardway.org/book/ex12.html Source Article</p>
+
+<p>require 'open-uri'</p>
+
+<p>open("http://www.ruby-lang.org/en") do |f|
+  f.each_line {|line| p line}
+  puts f.base_uri         # &lt;URI::HTTP:0x40e6ef2 URL:http://www.ruby-lang.org/en/>
+  puts f.content_type     # "text/html"
+  puts f.charset          # "iso-8859-1"
+  puts f.content_encoding # []
+  puts f.last_modified    # Thu Dec 05 02:45:02 UTC 2002
+end
+```
+Typing code like the excerpt above has developed muscle memory for me, and made me think of solutions faster, just as Zed said it would.</p>
+
+<p>Happy typing!</p>
 ]]></content>
   </entry>
   

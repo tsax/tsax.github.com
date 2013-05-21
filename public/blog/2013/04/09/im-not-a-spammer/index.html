@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Nature's Complexity, Human Incomprehension - Tushar's Blog</title>
+  <title>I'm Not a Spammer - Tushar's Blog</title>
   <meta name="author" content="Tushar Saxena">
 
   
-  <meta name="description" content="From the Enlightenment onwards, we humans have betrayed a supreme confidence in our ability to read, interpret, deconstruct and ultimately triumph &hellip;">
+  <meta name="description" content="For my current side-project, I need to send emails to a list of people whose email addresses are stored in the database. My concern, as you can &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.tusharsaxena.com/blog/2013/01/29/natures-complexity-human-incomprehension/">
+  <link rel="canonical" href="http://www.tusharsaxena.com/blog/2013/04/09/im-not-a-spammer/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
    <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -66,7 +66,7 @@
   
   <header>
     
-      <h1 class="entry-title">Nature's Complexity, Human Incomprehension</h1>
+      <h1 class="entry-title">I'm Not a Spammer</h1>
     
     
       <p class="meta">
@@ -82,20 +82,39 @@
   
 
 
-<time datetime="2013-01-29T17:54:00-05:00" pubdate data-updated="true">Jan 29<span>th</span>, 2013</time>
+<time datetime="2013-04-09T02:05:00-04:00" pubdate data-updated="true">Apr 9<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>From the Enlightenment onwards, we humans have betrayed a supreme confidence in our ability to read, interpret, deconstruct and ultimately triumph over the natural world using nothing but our faculties of reason, through their manifestations in science, technology and philosophy.</p>
+<div class="entry-content"><p>For my current side-project, I need to send emails to a list of people whose email addresses are stored in the database. My concern, as you can imagine, is to prevent spamming my users in instances of error or otherwise. There&#8217;s several ways to do this. As usual, it comes down to a choice - a judgement call from among the many choices.</p>
 
-<p>Okay that sounded way too high-brow. Nonetheless, I just came across <a href="http://highscalability.com/blog/2012/4/9/why-my-slime-mold-is-better-than-your-hadoop-cluster.html">this awe-inspiring post</a> at High Scalability.</p>
+<ol>
+<li>Creating an emails model to keep track of when an email was sent and to whom.</li>
+<li>Storing the last time a user received an email in the user model.</li>
+</ol>
 
-<p>A creature as &#8216;simple&#8217; as a slime mold is capable of amazing feats of computation by following simple rules that Nature has granted it through evolution. I don&#8217;t know whether scientists have deconstructed slime molds down to individual proteins and built up a whole model of it, though that seems unlikely and complex. And that&#8217;s the point! The organization and structure of a slime mold, though simple compared to multi-cellular organisms like us, is still extremely complex for our minds to deconstruct through observation and reason. There&#8217;s logic embedded in the structural complexity of the natural world not wholly visible to us.</p>
 
-<p>Since I haven&#8217;t yet tried &#8216;genetic programming,&#8217; I don&#8217;t know how effective it is in adopting nature&#8217;s solutions to some computation problems, nonetheless I should give it a shot sometime, perhaps using <a href="http://hackershelf.com/book/5/clever-algorithms/">this book on HackerShelf</a></p>
+<p>You can think of many others ways to do this of course.
+I decided to go with the second option as it required minimal effort and has so far turned out
+very well. This was accomplished with a single <code>rails generate migration AddLastEmailToSubscribers last_email:datetime</code>.</p>
+
+<p>This will create the following migration</p>
+
+<figure class='code'><figcaption><span>AddLastEmailToSubscribers</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">AddLastEmailToSubscribers</span> <span class="o">&lt;</span> <span class="ss">ActiveRecord</span><span class="p">:</span><span class="ss">:Migration</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">change</span>
+</span><span class='line'>    <span class="n">add_column</span> <span class="ss">:subscribers</span><span class="p">,</span> <span class="ss">:last_email</span><span class="p">,</span> <span class="ss">:datetime</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
 </div>
 
 
@@ -118,12 +137,12 @@
   
 
 
-<time datetime="2013-01-29T17:54:00-05:00" pubdate data-updated="true">Jan 29<span>th</span>, 2013</time>
+<time datetime="2013-04-09T02:05:00-04:00" pubdate data-updated="true">Apr 9<span>th</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/complexity/'>Complexity</a>, <a class='category' href='/blog/categories/embedded-knowledge/'>Embedded-Knowledge</a>, <a class='category' href='/blog/categories/nature/'>Nature</a>, <a class='category' href='/blog/categories/optimization/'>Optimization</a>
+    <a class='category' href='/blog/categories/learning/'>learning</a>, <a class='category' href='/blog/categories/pecunia-nunc/'>pecunia-nunc</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/side-projects/'>side-projects</a>
   
 </span>
 
@@ -132,7 +151,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.tusharsaxena.com/blog/2013/01/29/natures-complexity-human-incomprehension/" data-via="tushar_saxena" data-counturl="http://www.tusharsaxena.com/blog/2013/01/29/natures-complexity-human-incomprehension/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.tusharsaxena.com/blog/2013/04/09/im-not-a-spammer/" data-via="tushar_saxena" data-counturl="http://www.tusharsaxena.com/blog/2013/04/09/im-not-a-spammer/" >Tweet</a>
   
   
   
@@ -143,10 +162,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/01/20/learning-muscle-memory-typing/" title="Previous Post: Learning, muscle memory, typing">&laquo; Learning, muscle memory, typing</a>
+        <a class="basic-alignment left" href="/blog/2013/04/03/down-with-the-sickness/" title="Previous Post: Down with the Sickness">&laquo; Down with the Sickness</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/02/14/bam-pow/" title="Next Post: Bam! Pow!">Bam! Pow! &raquo;</a>
       
     </p>
   </footer>
@@ -266,8 +283,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://www.tusharsaxena.com/blog/2013/01/29/natures-complexity-human-incomprehension/';
-        var disqus_url = 'http://www.tusharsaxena.com/blog/2013/01/29/natures-complexity-human-incomprehension/';
+        var disqus_identifier = 'http://www.tusharsaxena.com/blog/2013/04/09/im-not-a-spammer/';
+        var disqus_url = 'http://www.tusharsaxena.com/blog/2013/04/09/im-not-a-spammer/';
         var disqus_script = 'embed.js';
       
     (function () {

@@ -3,7 +3,7 @@ layout: post
 title: "Redirect_to and preservation of errors"
 date: 2013-03-25 00:38
 comments: true
-categories: pecunia-nunc, debugging, side-projects
+categories: [pecunia-nunc, debugging, side-projects]
 ---
 
 Working on my side project, [Pecunia-Nunc](https://github.com/tsax/pecunia-nunc/), I was baffled when the errors on the object creation form would not display upon submission. The controller looked like this

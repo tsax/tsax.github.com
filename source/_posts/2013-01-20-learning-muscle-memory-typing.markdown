@@ -3,7 +3,7 @@ layout: post
 title: "Learning, muscle memory, typing"
 date: 2013-01-20 16:39
 comments: true
-categories: [Learning, Ruby, Learn-Ruby-The-Hard-Way, Typing]
+categories: [learning, ruby, learn-ruby-the-hard-way, typing]
 ---
 Going through Zed Shaw's [Learn Ruby the Hard Way](http://ruby.learncodethehardway.org/book/), I now recognize the importance of typing in the context of learning to program a new language. My professional experience in software development consisted of .NET development in C#, which is extremely similar to JAVA in syntax. So, upon encountering Ruby syntax elements such as pipes '|', typing the code becomes slow due to a lack of practice, which impedes and constricts thinking. 
 
