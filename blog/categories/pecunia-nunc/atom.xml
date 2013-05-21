@@ -4,7 +4,7 @@
   <title><![CDATA[Category: pecunia-nunc | Tushar's Blog]]></title>
   <link href="http://www.tusharsaxena.com/blog/categories/pecunia-nunc/atom.xml" rel="self"/>
   <link href="http://www.tusharsaxena.com/"/>
-  <updated>2013-05-21T01:02:52-04:00</updated>
+  <updated>2013-05-21T01:10:16-04:00</updated>
   <id>http://www.tusharsaxena.com/</id>
   <author>
     <name><![CDATA[Tushar Saxena]]></name>
@@ -41,7 +41,11 @@ class AddLastEmailToSubscribers &lt; ActiveRecord::Migration
 <p>  end
 end</p>
 
-<p>```</p>
+<p><code>
+From here, I can simply check if the :last_email is nil or a day before today's,
+and if so, then send the day's email, and then update the last_email to</code>Time.now```</p>
+
+<p>Simple.</p>
 ]]></content>
   </entry>
   
