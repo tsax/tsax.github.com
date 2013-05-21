@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: pecunia-nunc, | Tushar's Blog]]></title>
-  <link href="http://www.tusharsaxena.com/blog/categories/pecunia-nunc-/atom.xml" rel="self"/>
+  <title><![CDATA[Category: debugging | Tushar's Blog]]></title>
+  <link href="http://www.tusharsaxena.com/blog/categories/debugging/atom.xml" rel="self"/>
   <link href="http://www.tusharsaxena.com/"/>
-  <updated>2013-04-03T23:37:22-04:00</updated>
+  <updated>2013-05-21T00:59:10-04:00</updated>
   <id>http://www.tusharsaxena.com/</id>
   <author>
     <name><![CDATA[Tushar Saxena]]></name>

@@ -9,7 +9,7 @@
   <meta name="author" content="Tushar Saxena">
 
   
-  <meta name="description" content="This is me for the past week Really need to get a lot of work done including all the side projects, but gah sometimes biology comes in the way. Damn &hellip;">
+  <meta name="description" content="For my current side-project, I need to send emails to a list of people whose email addresses are stored in the database. My concern, as you can &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -63,6 +63,67 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/04/09/im-not-a-spammer/">I&#8217;m Not a Spammer</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-09T02:05:00-04:00" pubdate data-updated="true">Apr 9<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>For my current side-project, I need to send emails to a list of people whose email addresses are stored in the database. My concern, as you can imagine, is to prevent spamming my users in instances of error or otherwise. There&#8217;s several ways to do this. As usual, it comes down to a choice - a judgement call from among the many choices.</p>
+
+<ol>
+<li>Creating an emails model to keep track of when an email was sent and to whom.</li>
+<li>Storing the last time a user received an email in the user model.</li>
+</ol>
+
+
+<p>You can think of many others ways to do this of course.
+I decided to go with the second option as it required minimal effort and has so far turned out
+very well. This was accomplished with a single <code>rails generate migration AddLastEmailToSubscribers last_email:datetime</code>.</p>
+
+<p>This will create the following migration</p>
+
+<figure class='code'><figcaption><span>AddLastEmailToSubscribers</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">AddLastEmailToSubscribers</span> <span class="o">&lt;</span> <span class="ss">ActiveRecord</span><span class="p">:</span><span class="ss">:Migration</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">change</span>
+</span><span class='line'>    <span class="n">add_column</span> <span class="ss">:subscribers</span><span class="p">,</span> <span class="ss">:last_email</span><span class="p">,</span> <span class="ss">:datetime</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -560,6 +621,10 @@ export GMAIL_PASSWORD="my password"
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/04/09/im-not-a-spammer/">I&#8217;m Not a Spammer</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/04/03/down-with-the-sickness/">Down with the Sickness</a>
       </li>
     
@@ -573,10 +638,6 @@ export GMAIL_PASSWORD="my password"
     
       <li class="post">
         <a href="/blog/2013/02/15/pow-environment-variable-trouble/">pow environment variable trouble</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/02/14/bam-pow/">Bam! Pow!</a>
       </li>
     
   </ul>
