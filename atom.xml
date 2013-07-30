@@ -4,7 +4,7 @@
   <title><![CDATA[Tushar's Blog]]></title>
   <link href="http://www.tusharsaxena.com/atom.xml" rel="self"/>
   <link href="http://www.tusharsaxena.com/"/>
-  <updated>2013-05-21T01:10:16-04:00</updated>
+  <updated>2013-07-30T00:06:09-04:00</updated>
   <id>http://www.tusharsaxena.com/</id>
   <author>
     <name><![CDATA[Tushar Saxena]]></name>
@@ -12,6 +12,42 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Pecunia Nunc is Live!]]></title>
+    <link href="http://www.tusharsaxena.com/blog/2013/07/01/pecunia-nunc-is-live/"/>
+    <updated>2013-07-01T22:02:00-04:00</updated>
+    <id>http://www.tusharsaxena.com/blog/2013/07/01/pecunia-nunc-is-live</id>
+    <content type="html"><![CDATA[<p>A few months ago, I came across this:</p>
+
+<div class='embed tweet'><blockquote class="twitter-tweet"><p>Anyone interested in working <a href="https://twitter.com/kickstarter">@kickstarter</a> I bet if you implemented <a href="https://twitter.com/peterc">@peterc</a> great idea that&#39;d be a leg up :-) <a href="https://t.co/bdqc9Ep7">https://t.co/bdqc9Ep7</a></p>&mdash; Avi Flombaum (@aviflombaum) <a href="https://twitter.com/aviflombaum/statuses/280470459059933186">December 17, 2012</a></blockquote>
+<script async src="http://www.tusharsaxena.com//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<p>The link in the above tweet was to this:</p>
+
+<div class='embed tweet'><blockquote class="twitter-tweet"><p>I&#39;d subscribe to a daily newsletter that alerted me to interesting Kickstarters ending today &amp; are funded (or close to it). Do it, KS! :)</p>&mdash; Peter Cooper (@peterc) <a href="https://twitter.com/peterc/statuses/280470229094637568">December 17, 2012</a></blockquote>
+<script async src="http://www.tusharsaxena.com//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<p>As I was and am interested in working for Kickstarter, and was looking to shore up my portfolio, particularly with Ruby projects, I decided to take on the project.</p>
+
+<p>After many false starts, I present to you&#8230;<em>drum roll please</em>&#8230;</p>
+
+<p><a href="http://pecunia-nunc.herokuapp.com"><strong>Pecunia Nunc</strong></a></p>
+
+<p>The idea is to send a daily digest of Kickstarter projects that fit a certain criteria to subscribers, such as
+- The projects are close to the finish line (>80% of goal funded)
+- The projects are ending soon (within 48 hours)</p>
+
+<p>I believe this will enable Kickstarter enthusiasts who don&#8217;t have time to browse the many interesting, worthy projects regularly to fund them when they most need help. Scanning the email in the morning takes 10-15 seconds, or more if you happen to find a project to like.</p>
+
+<p>I hope I&#8217;ve fulfiled a need.
+If not, there&#8217;s always next time.</p>
+
+<p>Enjoy!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[I'm Not a Spammer]]></title>
