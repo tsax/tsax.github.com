@@ -23,3 +23,7 @@ class AddLastEmailToSubscribers < ActiveRecord::Migration
 end
 
 ```
+From here, I can simply check if the :last_email is nil or a day before today's,
+and if so, then send the day's email, and then update the last_email to ```Time.now```
+
+Simple.

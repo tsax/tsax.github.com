@@ -115,6 +115,11 @@ very well. This was accomplished with a single <code>rails generate migration Ad
 </span><span class='line'><span class="k">end</span>
 </span></code></pre></td></tr></table></div></figure>
 
+
+<p>From here, I can simply check if the :last_email is nil or a day before today&#8217;s,
+and if so, then send the day&#8217;s email, and then update the last_email to <code>Time.now</code></p>
+
+<p>Simple.</p>
 </div>
 
 
