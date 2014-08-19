@@ -4,7 +4,7 @@
   <title><![CDATA[Tushar's Blog]]></title>
   <link href="http://www.tusharsaxena.com/atom.xml" rel="self"/>
   <link href="http://www.tusharsaxena.com/"/>
-  <updated>2014-08-18T00:01:32-04:00</updated>
+  <updated>2014-08-18T01:19:59-04:00</updated>
   <id>http://www.tusharsaxena.com/</id>
   <author>
     <name><![CDATA[Tushar Saxena]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Pecunia Nunc is Live!]]></title>
+    <title type="html"><![CDATA[Pecunia Nunc Is Live!]]></title>
     <link href="http://www.tusharsaxena.com/blog/2013/07/01/pecunia-nunc-is-live/"/>
     <updated>2013-07-01T22:02:00-04:00</updated>
     <id>http://www.tusharsaxena.com/blog/2013/07/01/pecunia-nunc-is-live</id>
@@ -89,7 +89,7 @@ and if so, then send the day&#8217;s email, and then update the last_email to <c
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Down with the Sickness]]></title>
+    <title type="html"><![CDATA[Down With the Sickness]]></title>
     <link href="http://www.tusharsaxena.com/blog/2013/04/03/down-with-the-sickness/"/>
     <updated>2013-04-03T23:30:00-04:00</updated>
     <id>http://www.tusharsaxena.com/blog/2013/04/03/down-with-the-sickness</id>
@@ -102,7 +102,7 @@ and if so, then send the day&#8217;s email, and then update the last_email to <c
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Redirect_to and preservation of errors]]></title>
+    <title type="html"><![CDATA[Redirect_to and Preservation of Errors]]></title>
     <link href="http://www.tusharsaxena.com/blog/2013/03/25/redirect-to-and-preservation-of-errors/"/>
     <updated>2013-03-25T00:38:00-04:00</updated>
     <id>http://www.tusharsaxena.com/blog/2013/03/25/redirect-to-and-preservation-of-errors</id>
@@ -190,7 +190,7 @@ and if so, then send the day&#8217;s email, and then update the last_email to <c
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[pow environment variable trouble]]></title>
+    <title type="html"><![CDATA[Pow Environment Variable Trouble]]></title>
     <link href="http://www.tusharsaxena.com/blog/2013/02/15/pow-environment-variable-trouble/"/>
     <updated>2013-02-15T01:57:00-05:00</updated>
     <id>http://www.tusharsaxena.com/blog/2013/02/15/pow-environment-variable-trouble</id>
@@ -265,7 +265,7 @@ export GMAIL_PASSWORD="my password"
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Learning, muscle memory, typing]]></title>
+    <title type="html"><![CDATA[Learning, Muscle Memory, Typing]]></title>
     <link href="http://www.tusharsaxena.com/blog/2013/01/20/learning-muscle-memory-typing/"/>
     <updated>2013-01-20T16:39:00-05:00</updated>
     <id>http://www.tusharsaxena.com/blog/2013/01/20/learning-muscle-memory-typing</id>
