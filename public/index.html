@@ -9,7 +9,7 @@
   <meta name="author" content="Tushar Saxena">
 
   
-  <meta name="description" content="For my current side-project, I need to send emails to a list of people whose email addresses are stored in the database. My concern, as you can &hellip;">
+  <meta name="description" content="A few months ago, I came across this: Anyone interested in working @kickstarter I bet if you implemented @peterc great idea that&#39;d be a leg up &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -33,6 +33,18 @@
 
 
   
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-53959314-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
 
 </head>
 
@@ -63,6 +75,69 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/07/01/pecunia-nunc-is-live/">Pecunia Nunc Is Live!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-01T22:02:00-04:00" pubdate data-updated="true">Jul 1<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A few months ago, I came across this:</p>
+
+<div class='embed tweet'><blockquote class="twitter-tweet"><p>Anyone interested in working <a href="https://twitter.com/kickstarter">@kickstarter</a> I bet if you implemented <a href="https://twitter.com/peterc">@peterc</a> great idea that&#39;d be a leg up :-) <a href="https://t.co/bdqc9Ep7">https://t.co/bdqc9Ep7</a></p>&mdash; Avi Flombaum (@aviflombaum) <a href="https://twitter.com/aviflombaum/statuses/280470459059933186">December 17, 2012</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<p>The link in the above tweet was to this:</p>
+
+<div class='embed tweet'><blockquote class="twitter-tweet"><p>I&#39;d subscribe to a daily newsletter that alerted me to interesting Kickstarters ending today &amp; are funded (or close to it). Do it, KS! :)</p>&mdash; Peter Cooper (@peterc) <a href="https://twitter.com/peterc/statuses/280470229094637568">December 17, 2012</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<p>As I was and am interested in working for Kickstarter, and was looking to shore up my portfolio, particularly with Ruby projects, I decided to take on the project.</p>
+
+<p>After many false starts, I present to you&#8230;<em>drum roll please</em>&#8230;</p>
+
+<p><a href="http://pecunia-nunc.herokuapp.com"><strong>Pecunia Nunc</strong></a></p>
+
+<p>The idea is to send a daily digest of Kickstarter projects that fit a certain criteria to subscribers, such as
+- The projects are close to the finish line (>80% of goal funded)
+- The projects are ending soon (within 48 hours)</p>
+
+<p>I believe this will enable Kickstarter enthusiasts who don&#8217;t have time to browse the many interesting, worthy projects regularly to fund them when they most need help. Scanning the email in the morning takes 10-15 seconds, or more if you happen to find a project to like.</p>
+
+<p>I hope I&#8217;ve fulfiled a need.
+If not, there&#8217;s always next time.</p>
+
+<p>Enjoy!</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -567,43 +642,9 @@ export GMAIL_PASSWORD="my password"
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/01/10/hello-world/">Hello World</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-10T20:18:00-05:00" pubdate data-updated="true">Jan 10<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Hello World! I&#8217;m baaaaaackk.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
+    
+      <a class="prev" href="/blog/page/2/">&larr; Older</a>
     
     <a href="archives">Blog Archives</a>
     
@@ -626,6 +667,10 @@ export GMAIL_PASSWORD="my password"
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/07/01/pecunia-nunc-is-live/">Pecunia Nunc is Live!</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/04/09/im-not-a-spammer/">I&#8217;m Not a Spammer</a>
       </li>
     
@@ -639,10 +684,6 @@ export GMAIL_PASSWORD="my password"
     
       <li class="post">
         <a href="/blog/2013/02/19/me-encanta-duolingo/">Me Encanta Duolingo!</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/02/15/pow-environment-variable-trouble/">pow environment variable trouble</a>
       </li>
     
   </ul>
@@ -693,6 +734,13 @@ export GMAIL_PASSWORD="my password"
 </section>
 
 
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/tsax?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/tsax">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
 
 
 
@@ -702,7 +750,7 @@ export GMAIL_PASSWORD="my password"
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Tushar Saxena -
+  Copyright &copy; 2016 - Tushar Saxena -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

@@ -85,7 +85,7 @@ pinboard_user:
 pinboard_count: 3
 
 # Delicious
-delicious_user:
+delicious_user: tsax
 delicious_count: 3
 
 # Disqus Comments
@@ -93,7 +93,7 @@ disqus_short_name: tusharsblog
 disqus_show_comment_count: false
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-53959314-1
 
 # Facebook Like
 facebook_like: true

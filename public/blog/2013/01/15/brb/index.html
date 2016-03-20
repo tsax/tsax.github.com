@@ -34,6 +34,18 @@
 
 
   
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-53959314-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
 
 </head>
 
@@ -172,6 +184,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/07/01/pecunia-nunc-is-live/">Pecunia Nunc is Live!</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/04/09/im-not-a-spammer/">I'm Not a Spammer</a>
       </li>
     
@@ -185,10 +201,6 @@
     
       <li class="post">
         <a href="/blog/2013/02/19/me-encanta-duolingo/">Me Encanta Duolingo!</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/02/15/pow-environment-variable-trouble/">pow environment variable trouble</a>
       </li>
     
   </ul>
@@ -239,6 +251,13 @@
 </section>
 
 
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/tsax?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/tsax">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
 
 
 
@@ -249,7 +268,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Tushar Saxena -
+  Copyright &copy; 2016 - Tushar Saxena -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
