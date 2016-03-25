@@ -4,7 +4,7 @@
   <title><![CDATA[Category: learning | Tushar's Blog]]></title>
   <link href="http://www.tusharsaxena.com/blog/categories/learning/atom.xml" rel="self"/>
   <link href="http://www.tusharsaxena.com/"/>
-  <updated>2016-03-20T03:06:54-04:00</updated>
+  <updated>2016-03-25T01:03:17-04:00</updated>
   <id>http://www.tusharsaxena.com/</id>
   <author>
     <name><![CDATA[Tushar Saxena]]></name>
@@ -12,6 +12,31 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[NodeProgram in March, NYC]]></title>
+    <link href="http://www.tusharsaxena.com/blog/2016/03/14/nodeprogram-in-march/"/>
+    <updated>2016-03-14T20:18:00-04:00</updated>
+    <id>http://www.tusharsaxena.com/blog/2016/03/14/nodeprogram-in-march</id>
+    <content type="html"><![CDATA[<p>The <a href="http://nodeprogram.com/"><em>NodeProgram</em></a> weekend workshop taught by <a href="http://azat.co/">Azat Mardan</a> was very well done. It was fast-paced and took no prisoners - not just familiarity but a minimal fluency with Javascript was assumed and required to keep up with the presentations and the exercises. I decided to attend both days of the weekend for a combined Sat+Sun of React and Node goodness. How else to productively spend a weekend?</p>
+
+<h2>Saturday : React </h2>
+
+<p>Saturday was devoted to <em>React.js</em> which I only had a passing familiarity with through osmosis (Hacker News, other fora). React is a very interesting model of front-end development and I thank Azat for helping me grok its fundamental nature - that of <em>composability</em> - the ability to compose components out of other components in a modular fashion. The urge to update the DOM through a quick jQuery function still nags my brain and will have to be trained out thru repeated React usage. We ended up working on <a href="http://nodeschool.io">Nodeschool</a> <a href="https://github.com/tako-black/learnyoureact">‘learnyoureact’</a> workshop between presentations of theoretical explanations. Mentors were available to assist people with their challenges and Azat walked around helping a lot as well. There was a supplementary presentation on React Native, which I paid minimal attention to as I’m not currently focused on building mobile apps and even when I play around with Swift on iOS, it’s good to have a solid understanding of a platform before (potentially) ruining one’s understanding with frameworks.</p>
+
+<h2>Sunday : Node</h2>
+
+<p>Azat emphasized repeatedly the <em>asynchronous</em> nature of <em>Node.js</em>, which was our topic for Sunday. The format of the day was similar to Saturday’s with working on <a href="http://nodeschool.io">Nodeschool</a> workshops (<a href="https://www.github.com/workshopper/learnyounode">learnyounode</a>, <a href="https://github.com/azat-co/expressworks">ExpressWorks</a>, <a href="https://github.com/evanlucas/learnyoumongo">learnyoumongo</a>) interspersed with theory and explanations of Node.js, Express.js and the usage of MongoDB with Node and Express. As I’d earlier played around with Node back in 2012 (but, regrettably hadn’t followed it through to a major project), I was aware of some of the basics but Azat’s explanations solidified my understanding and I’m excited to build on top of my newly acquired knowledge.</p>
+
+<p>I find it worthwhile to mention that Azat has a personality. He not only delivers good presentations and helps with one's code, but also describes various scientifically tested learning strategies such as spaced repetition. He clearly keeps up with the learning geekosphere online! He also took the liberty of filling the 'space' in our spaced repetition with a quick foray to introduce meditation! Enjoyable and unique.</p>
+
+<p>Overall, NodeProgram has reinforced my belief in hard, weekend workshops - it's the ideal way to get a quick, rigorous introduction to a new technology - far more sticky in my mind than going through a dozen tutorials online. One can't discount the serendipity of meeting great people either.</p>
+
+<h2>Addendum</h2>
+
+<p>Speaking of Javascript, I recently across this surrealist talk delivered by Gary Bernhardt titled <a href="https://www.destroyallsoftware.com/talks/the-birth-and-death-of-javascript">The Birth and Death of Javascript</a>. The futuristic retrospection delivered by Bernhardt is superb and truly mind-bending. It uses the mechanism of comedy to sneak in some pretty radical but feasible ideas for the evolution of Javascript and all programming 25 years from now. Do watch it!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[I'm Not a Spammer]]></title>
