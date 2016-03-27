@@ -4,7 +4,7 @@
   <title><![CDATA[Tushar's Blog]]></title>
   <link href="http://www.tusharsaxena.com/atom.xml" rel="self"/>
   <link href="http://www.tusharsaxena.com/"/>
-  <updated>2016-03-25T01:32:42-04:00</updated>
+  <updated>2016-03-26T22:30:38-04:00</updated>
   <id>http://www.tusharsaxena.com/</id>
   <author>
     <name><![CDATA[Tushar Saxena]]></name>
@@ -340,6 +340,79 @@ export GMAIL_PASSWORD="my password"
     <updated>2013-01-10T20:18:00-05:00</updated>
     <id>http://www.tusharsaxena.com/blog/2013/01/10/hello-world</id>
     <content type="html"><![CDATA[<p>Hello World! I&#8217;m baaaaaackk.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Retina Aches]]></title>
+    <link href="http://www.tusharsaxena.com/blog/2012/07/27/retina-aches/"/>
+    <updated>2012-07-27T16:50:00-04:00</updated>
+    <id>http://www.tusharsaxena.com/blog/2012/07/27/retina-aches</id>
+    <content type="html"><![CDATA[<p><img src="https://tusharsaxena.files.wordpress.com/2012/07/apple_15inch_macbook_pro_with_retina_display_1218250_g11.jpg?w=692&h=468"></p>
+
+<p>I wonder if any other MacBook Pro with Retina display owners have noticed tiring of the eyes to a further extent than regular laptops (including MacBooks). There seems to be more of an intense focus engendered by the Retina screen. The closest analogue I can think of is maybe watching a 3D movie.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Start-up Tour – 10gen]]></title>
+    <link href="http://www.tusharsaxena.com/blog/2012/07/26/start-up-tour-10gen/"/>
+    <updated>2012-07-26T20:18:00-04:00</updated>
+    <id>http://www.tusharsaxena.com/blog/2012/07/26/start-up-tour-10gen</id>
+    <content type="html"><![CDATA[<p>Attended a fun event called <a href="http://www.meetup.com/StartupTour/">“Start-up Tour.”</a> This involved visiting the offices of 10gen, Thrillist and Foursquare. They shoved tons of food down our throat. I was impressed with the quality of the food. As a participant in the tech scene, one’s culinary choice is often limited to pizza and beer but in this instance we were treated to high quality charcuterie at 10gen and decent taco fillings at Foursquare.</p>
+
+<p><strong>Presentations</strong>
+All the presentations came across as genuine without many marketing phrases that such events are usually full of.</p>
+
+<ul>
+<li>10gen</li>
+</ul>
+
+
+<p>The slide deck presenting Mongo was only partially informative. Many people who have no clue what <a href="http://en.wikipedia.org/wiki/NoSQL">‘NoSQL‘</a> actually means would not have understood ‘document storage’ vs relational databases either. Some code samples would have helped.</p>
+
+<p>Tyler Brock, who is responsible for the Ruby driver for MongoDB delivered the presentation. Incidentally, I’d just attended the NYC.rb Hackfest meetup the previous day where I’d met a cool dude named <a href="http://bent-cardan.com/info/">Bent Cardan</a> who helped me get my new MacBook Pro setup with ZSH and iTerm and gave me a full demo of agile hacking on rails with Mongomapper which is an open source community-developed ORM/ODM for MongoDB. This prompted me to ask Tyler whether an ‘official’ ODM solution was on the way for MongoDB on Rails/Ruby. Interestingly enough, Tyler mentioned that he wanted to do an ODM and that since he’s in charge of Ruby driver dev, it would probably happen though not anytime soon.</p>
+
+<ul>
+<li>Thrillist</li>
+</ul>
+
+
+<p>I was surprised that the presentation had no screenshot of Thrillist or JackThreads sites as they are very hip and cool and people unaware of them would certainly have enjoyed them. The description of the various Thrillist sites was mostly abstract with very few examples thrown in.</p>
+
+<p>This was followed by an enjoyably geeky description of the workflow and design process of a recent project within the company that involved handling user data on the various Thrillist Media sites. Detailed block diagrams illustrated the way they’d used lots of components – MongoDB, Redis, MySQL, nginx/unicorn, etc. I was hooked! My takeaway was the line, which I paraphrase as “When you are creating a universal API, everyone’s your enemy.” A succinct crystallization of the issue of defensive programming.</p>
+
+<ul>
+<li>Foursquare</li>
+</ul>
+
+
+<p>This presentation was the most statistics-heavy. Details included number of user check-ins and venues among others and the numbers were impressive. The CTO was the presenter and he gave us an overview of the scaling challenges that Foursquare faces. The part I found interesting was when he mentioned that since all history of  a user’s activity is important in the future, the scaling challenges are very different from, say, Facebook or Twitter where past tweets or messages are mostly not accessed at all.</p>
+
+<p><strong>Offices</strong></p>
+
+<p>All the offices were open-space as expected but each had a different feel to it.</p>
+
+<p>The 10gen offices felt linear and uncluttered. It was basically a rectangular layout with window views of SoHo on each end. A decent amount of natural light.</p>
+
+<p>Thrillist offices felt like giant male dorm rooms with crazy posters including those of semi-naked girls on the walls, funny artifacts thrown about everywhere and a collegial atmosphere.</p>
+
+<p>Foursquare’s main lobby is an atrium with very high skylights. The conference rooms are boxed inside very glossy um glass and hold iPads next to the doors with the schedule information. Overall the offices felt airy and calm but perhaps the Zen-like affects were due to the relative emptiness of the place.</p>
+
+<p><strong>People</strong></p>
+
+<p>An eclectic mix of people attended, though only eclectic in the tech scene not in a universal sense. Ran into a few people I know including a friend. The Thrillist people seemed to be the most laid back. 10gen technologists oozed C++ (hard to explain) while Foursquare devs looked like determined project deathmarchers.</p>
+
+<p>Overall, a fun and interesting experience, highly recommended!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[puts 'Hello World']]></title>
+    <link href="http://www.tusharsaxena.com/blog/2012/06/21/puts-hello-world/"/>
+    <updated>2012-06-21T22:16:00-04:00</updated>
+    <id>http://www.tusharsaxena.com/blog/2012/06/21/puts-hello-world</id>
+    <content type="html"><![CDATA[<p>I just thought it’s time to get online in a serious way and document my journey as I learn new programming languages, frameworks and tools. Also expect an odd thought or two on economics.</p>
 ]]></content>
   </entry>
   
